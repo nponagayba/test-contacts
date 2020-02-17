@@ -1,0 +1,32 @@
+logging:
+  level:
+    ROOT: INFO
+    com.github.nponagayba.contacts: DEBUG
+
+spring:
+  application:
+    name: contacts
+  datasource:
+    url: jdbc:postgresql://localhost:5432/contacts
+    username: contacts
+    password: contacts
+    hikari:
+      auto-commit: false
+  jpa:
+    database: postgresql
+    show-sql: false
+    open-in-view: false
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+    properties:
+      hibernate.id.new_generator_mappings: true
+      hibernate.connection.provider_disables_autocommit: true
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_query_cache: false
+      hibernate.generate_statistics: false
+      hibernate.hbm2ddl.auto: create
+      hibernate.proc.param_null_passing: true

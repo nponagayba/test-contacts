@@ -1,0 +1,15 @@
+version: '2'
+services:
+  contacts-app:
+    image: contacts
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://contacts-postgresql/contacts
+      - SPRING_DATASOURCE_USERNAME=contacts
+      - SPRING_DATASOURCE_PASSWORD=contacts
+    ports:
+      - 8080:8080
+  contacts-postgresql:
+    extends:
+      file: postgresql.yml
+      service: contacts-postgresql
