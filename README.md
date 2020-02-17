@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/nponagayba/test-contacts.svg?branch=master)](https://travis-ci.com/nponagayba/test-contacts)
+
+
 ## Building and running locally
 The application uses PostgreSQL DBMS. See datasource configuration in `src/main/resources/application.yml`
 
