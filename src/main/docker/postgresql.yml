@@ -1,0 +1,11 @@
+version: '2'
+services:
+  contacts-postgresql:
+    image: postgres:12.1
+    # volumes:
+    #     - ~/volumes/contacts/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=contacts
+      - POSTGRES_PASSWORD=contacts
+    ports:
+      - 5432:5432
